@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사 선택자 고급</title>
+</head>
+<body>
+
+    <!-- 예) 메뉴 항목 위로 마우스 커서를 올렸을때 해당 메뉴 외의 다른 항목들의 글자색을 바꾸고 희미하게 -->
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </nav> 
+    <style>
+        nav ul{
+            background-color: black; 
+            display: flex; 
+            flex-direction: row;
+            list-style: none; 
+            justify-content: space-evenly;
+            padding: 1rem;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover{color: orange;}
+        nav:has(a:hover) a:not(:hover){opacity: 0.4;}
+    </style>
+
+    <hr>
+
+    <main>
+        <h1>TITLE</h1>
+        <p>This is message</p>
+    </main>
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        main h1::before{
+            content: "*";
+            color: blue;
+            margin-right: 5px;
+        }
+        main h1::after{
+            content: " 제목";
+            color: gray;
+            font-size: 0.7em;
+        }
+    </style>
+    
+</body>
+</html>

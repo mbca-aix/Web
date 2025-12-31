@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Style</title>
+
+    <style>
+
+        .container>div{
+            background-color: aqua;
+            margin: 4px;
+            text-align: center;
+            padding: 8px;
+        }
+
+        /*자식요소들을 격자구조로 배치하기 위해.. 부모요소에 grid 스타일 적용*/
+        .container{
+            display: grid;
+            border: 1px dashed blue;
+
+            /*자식 요소들을 한줄에 3칸씩 배치해보기*/
+            grid-template-columns: 100px 200px 100px; /*각 컬룸의 너비 지정[지정한 개수만큼 column 개수가 됨]*/
+
+            /*px 단위 대신에.. 상대적인 비율로 너비를 결정할 수 있는 fr단위(fraction:일부분)*/
+            grid-template-columns: 1fr 1fr 2fr;  /*1:1:2*/
+
+            /*전체 자식요소의 너비를 균등하게 하고 싶다면.*/
+            grid-template-columns: auto auto auto;
+
+            /* 높이도 지정할 수 있음*/
+            grid-template-rows: 150px 200px; /*첫번째줄 150px, 두번째줄 200px*/
+
+            /* 칸 사이의 너비와 높이 갭을 설정*/
+            column-gap: 1rem;
+            row-gap: 0.5rem;
+            gap: .5rem 1rem; /*row column*/
+        }
+
+        /* 특정 셀 위치를 지정 및 병합*/
+        #item1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /*1~2번까지 영역을 차지*/
+        }
+        #item3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            /*2~3번까지 영역을 차지*/
+        }
+        #item5{
+            grid-column: 3 / span 2;
+            /*3번 위치에서 시작하여 2칸 늘려진 사이즈[3~4칸[*/
+        }
+        #item6{
+            /*줄 병합*/
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 플랙스 스타일처럼 부모요소에 grid 속성으로 자식요소를 격자 배치해줌 -->
+    <div class="container">
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>
+        <div id="item4">4</div>
+        <div id="item5">5</div>
+        <div id="item6">6</div>
+        <div id="item7">7</div>
+    </div> 
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operator</title>
+
+    <!-- 내부 스크립트 -->
+    <script>
+
+        // 1. 산술연산자  + - * / %(나머지)
+        document.write(10 + 4 + "<br>");
+        document.write(10 - 4 + "<br>");
+        document.write(10 * 4 + "<br>");
+        document.write(10 / 4 + "<br>");
+        document.write(10 % 4 + "<br>");
+
+        // 0나눗셈이 에러가 아님. [파이썬에서는 예외발생]
+        document.write(10 / 0 + "<br>"); //결과 : Infinity(무한)
+
+        document.write('<hr>');
+
+        // 2. 비교연산자 < > <= >= == !=
+        document.write( (5 < 10) +"<br>");  //결과는 논리값 : true
+        document.write( (5 > 10) +"<br>");  // false
+        document.write( (5 <= 10) +"<br>"); // true
+        document.write( (5 >= 10) +"<br>"); // false
+        document.write( (5 == 10) +"<br>"); // false
+        document.write( (5 != 10) +"<br>"); // true
+
+        // 새로 도입된 비교연산자 === !== [자료형의 타입까지도 비교해 줌]
+        document.write( (10 == '10') +"<br>" ); //true [==는 자료형을 무시하고 생김새.. 즉. 값만 비교]
+        document.write( (10 === '10') +"<br>" ); //false 
+        document.write('<hr>');
+
+        // 3. 논리 연산자 [비교연산자 여러개를 묶을때 사용]
+
+        // 4. 증감 연산자
+
+        // 5. 복합대입 연산자
+
+        // 6. 형변환 연산자(기능함수)
+
+
+    </script> 
+
+</head>
+<body>
+    
+</body>
+</html>

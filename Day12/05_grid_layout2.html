@@ -1,0 +1,59 @@
+<!-- 웹 페이치의 전체 레이아웃구조는 Grid style -->
+<!-- 각 영역안에서의 요소배치는 flex style -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout 2</title>
+
+    <style>
+
+        /*wrap 안에 있는 모든 영역용 자식요소의 스타일링*/
+        .wrap>*{
+            background-color: aquamarine;
+            text-align: center;
+            padding: 20px 0px;
+            font-size: 30px;
+            border: 1px solid black;
+        }
+        .wrap>:nth-child(n){
+            font-weight: bold;
+        }
+
+        /*Grid 스타일로 격자모양을 만들때. 각 영역의 별명을 통해 칸수를 지정할 수 있음.*/
+        header{ grid-area: aa; }
+        nav{ grid-area: bb;}
+        main{ grid-area: cc;}
+        aside{grid-area: dd;}
+        footer{grid-area: ee;}
+
+        /* gird 로 배치를 하고자 하는 부모요소*/
+        .wrap{
+            display: grid;
+
+            grid-template-areas: 
+                'aa aa aa aa aa'
+                'bb cc cc cc dd'
+                'ee ee ee ee ee';
+
+            /*각 줄의 높이 지정*/
+            grid-template-rows: auto 300px auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap">
+        <header>HEADER</header>
+        <nav>MENU</nav>
+        <main>main content</main>
+        <aside>SIDE</aside>
+        <footer>FOOTER</footer>
+    </div>
+    
+</body>
+</html>

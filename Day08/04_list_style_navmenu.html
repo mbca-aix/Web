@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Some Website</title>
+        <meta charset="utf-8">
+
+        <style>
+
+            @font-face {
+                font-family: 'aaaaa';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimPuzzleTTF-Outline.woff2') format('woff2');
+                font-weight: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'bbb';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/TTSamlipCreamyWhiteR.woff2') format('woff2');
+                font-weight: normal;
+                font-display: swap;
+            }
+
+            #header{
+                background-color: #cccccc;
+                text-align: center;
+                padding: 3em 0em;
+            }
+            #header h1{
+                color: white;
+                font-family: 'bbb';
+                font-weight: 900;
+            }
+            #header p{        
+                font-family: 'aaaaa';        
+                color: white; 
+                font-weight: bold;             
+            }
+
+            #nav{
+                list-style: none;
+                text-align: center;
+                border-top: 1px solid red;
+                border-bottom: 1px solid red;
+                padding: 1em 0;
+            }
+
+            #nav li{
+                display: inline;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                padding: 0 15px;
+            }
+
+            #nav li a{
+                text-decoration: none;
+                color: black;
+            }
+            #nav li a:hover{
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>HOME PAGE</h1>
+            <p>This is my home page</p>
+        </div>
+
+        <ul id="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </body>
+</html>
