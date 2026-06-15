@@ -28,7 +28,7 @@
 
     // CSR 구조에서는 php의 역할은 ..이 게시글 데이터들만 사용자에게 응답.
     //echo $board_list; 
-    echo json_encode($board_list); //대량의 데이터를 json 형식으로 응답
+    //echo json_encode($board_list); //대량의 데이터를 json 형식으로 응답
 ?>
 
 
